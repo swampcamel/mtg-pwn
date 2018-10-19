@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { Card } from '../models/card.model';
 
 @Component({
   selector: 'app-add-card',
@@ -6,10 +7,10 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./add-card.component.css']
 })
 export class AddCardComponent {
+  @Output() sendCard = new EventEmitter();
 
-  constructor() { }
-
-  ngOnInit() {
+  enterCard(artist: string, cmc: number, colors: string, flavor: string, id: string, imageUrl: string, manaCost: string, name: string, power: number, rarity: string, text: string, toughness: number, types: string) {
+    let newCard: Card = new Card(artist, cmc, colors, flavor, id, imageUrl, manaCost, name, power, rarity, text, toughness, types);
+    this.sendCard.emit(newCard);
   }
-
 }

@@ -1,3 +1,56 @@
-<p>
-  add-card works!
-</p>
+<h2>Create a Card</h2>
+<div class="form-field">
+  <label>Your Name: </label>
+  <input #newArtist type="text">
+</div>
+<div class="form-field">
+  <label>New Card Name: </label>
+  <input #newName type="text">
+</div>
+<div class="form-field">
+  <label>Id: </label>
+  <input #newId type="text">
+</div>
+<div class="form-field">
+  <label>Image URL: </label>
+  <input #newImageUrl type="text">
+</div>
+<div class="form-field">
+  <label>Rarity: </label>
+  <input #newRarity type="text">
+</div>
+<div class="form-field">
+  <label>Colors: </label>
+  <input #newColors type="text">
+</div>
+<div class="form-field">
+  <label>Converted Mana Cost: </label>
+  <input #newCmc type="number">
+</div>
+<div class="form-field">
+  <label>Mana Cost by Type: </label>
+  <input #newManaCost type="text">
+</div>
+<div class="form-field">
+  <label>Power: </label>
+  <input #newPower type="number">
+</div>
+<div class="form-field">
+  <label>Toughness: </label>
+  <input #newToughness type="number">
+</div>
+<div class="form-field">
+  <label>Card Types: </label>
+  <input #newTypes type="text">
+</div>
+<div class="form-field">
+  <label>Card Text: </label>
+  <input #newText type="text">
+</div>
+<div class="form-field">
+  <label>Flavor Text: </label>
+  <input #newFlavor type="text">
+</div>
+<div class="">
+  <button (click)="enterCard(newArtist.value, newCmc.value, newColors.value, newFlavor.value, newId.value, newImageUrl.value, newManaCost.value, newName.value, newPower.value, newRarity.value, newText.value, newToughness.value, newTypes.value)">Enter Keg</button>
+</div>

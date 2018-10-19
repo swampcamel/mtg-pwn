@@ -1,0 +1,5 @@
+.form-field {
+  padding: 4px;
+  display: flex;
+  justify-content: space-between;
+}
