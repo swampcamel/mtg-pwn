@@ -9,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent {
   title = 'mtg-test';
   magic = require('./AllSets.json');
+  guildsSet = this.magic.GRN;
+  standardSet = this.magic.M19;
+  combinedSet = [this.guildsSet, this.standardSet];
   ngOnInit() {
-    console.log(this.magic);
+    console.log(this.guildsSet);
   }
 }
