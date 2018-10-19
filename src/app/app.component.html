@@ -2,7 +2,7 @@
   <h1>MTG PWN</h1>
 </div>
 <div class="app-wrapper">
-  <card-list [childCardList]="combinedSet"></card-list>
-  <app-add-card></app-add-card>
+  <card-list [childCardList]="guildsSet"></card-list>
+  <app-add-card (sendCard)="addCard($event)"></app-add-card>
 </div>
 <app-deck-list></app-deck-list>

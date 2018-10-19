@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Card } from './models/card.model';
 
 @Component({
   selector: 'app-root',
@@ -14,5 +15,8 @@ export class AppComponent {
   combinedSet = [this.guildsSet, this.standardSet];
   ngOnInit() {
     console.log(this.guildsSet);
+  }
+  addCard(newCard: Card) {
+    this.guildsSet.cards.unshift(newCard);
   }
 }
