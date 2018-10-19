@@ -15,5 +15,7 @@ export class CardListComponent {
 
   }
 
-
+  addCardToDeck (card) {
+    
+  }
 }

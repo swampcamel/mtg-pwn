@@ -1,6 +1,6 @@
 export class Deck {
   public dateCreated: Date = new Date();
-  public cardList: Object[] = [];
+  public cardList = [];
   constructor (
     public deckTitle: string,
   ) { }
