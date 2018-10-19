@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Deck } from '../models/deck.model';
 
 @Component({
   selector: 'card-list',

@@ -1,6 +1,6 @@
 <h2>{{childCardList[0].name}}</h2>
-<ul>
-  <li *ngFor="let cards of childCardList[0].cards">
-    {{cards.name}}
+<ul class="card-list">
+  <li class="card-detail" *ngFor="let cards of childCardList[0].cards">
+    <span>{{cards.name}}</span> <span><button type="button" class="addCard"> + </button></span>
   </li>
 </ul>

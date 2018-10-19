@@ -1,0 +1,16 @@
+.addCard {
+  margin-left: 20px;
+}
+
+.card-list {
+  list-style: none;
+}
+
+.card-detail {
+  border: 2px dashed #e1e1e1;
+  margin: 8px;
+  padding: 8px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
