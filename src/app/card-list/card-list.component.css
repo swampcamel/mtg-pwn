@@ -1,9 +1,21 @@
+.section-title {
+  text-align: center;
+  width: 420px;
+  border-bottom: #c1c1c1 solid 1px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 6px;
+}
+
 .addCard {
   margin-left: 20px;
 }
 
 .card-list {
   list-style: none;
+  display: flex;
+  width: 1200px;
+  flex-wrap: wrap;
 }
 
 .card-detail {

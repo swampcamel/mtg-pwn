@@ -8,7 +8,7 @@ import { Card } from './models/card.model';
 })
 
 export class AppComponent {
-  title = 'mtg-test';
+  title = 'MTG PWN';
   magic = require('./AllSets.json');
   guildsSet = this.magic.GRN;
   standardSet = this.magic.M19;
