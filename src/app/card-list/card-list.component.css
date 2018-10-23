@@ -14,8 +14,11 @@
 .card-list {
   list-style: none;
   display: flex;
-  width: 1200px;
+  width: 90%;
   flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
 }
 
 .card-detail {
