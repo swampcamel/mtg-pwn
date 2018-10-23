@@ -23,7 +23,7 @@ import { masterFirebaseConfig } from './api-keys';
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(masterFirebaseConfig.firebase),
+    AngularFireModule.initializeApp(masterFirebaseConfig),
     AngularFireDatabaseModule
   ],
   providers: [],

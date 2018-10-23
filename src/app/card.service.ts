@@ -5,17 +5,14 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class CardService {
-  mtg: Observable<any>;
+  mtg: AngularFireList<any>;
   constructor(private database: AngularFireDatabase) {
-  this.mtg = database.list('GRN').valueChanges();
+  this.mtg = database.list('GRN');
 
  }
 
   getCards() {
-  this.mtg.subscribe(data => {
-    console.log(data);
-    return data;
-  });
+    return this.database.list('GRN');
+  }
 
   }
-}

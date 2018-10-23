@@ -12,12 +12,14 @@ import {AngularFireDatabase, AngularFireList} from '@angular/fire/database';
   providers: [CardService]
 })
 export class CardListComponent implements OnInit {
-  childCardList: Observable<any>;
+  childCardList;
   constructor(  private cardService: CardService ) { }
 
   ngOnInit() {
-    this.childCardList = this.cardService.getCards();
-    console.log(this.childCardList);
+    this.cardService.getCards().valueChanges().subscribe(data => {
+      this.childCardList = data[2];
+      console.log(this.childCardList);
+    })
   }
 
   addCardToDeck (card) {
