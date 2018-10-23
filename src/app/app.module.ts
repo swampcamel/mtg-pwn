@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireModule } from '@angular/fire';
 
 import { AppComponent } from './app.component';
 import { CardListComponent } from './card-list/card-list.component';
@@ -13,13 +13,6 @@ import { masterFirebaseConfig } from './api-keys';
 
 
 
-export const firebaseConfig = {
-  apiKey: masterFirebaseConfig.apiKey,
-  authDomain: masterFirebaseConfig.authDomain,
-  databaseURL: masterFirebaseConfig.databaseURL,
-  storageBucket: masterFirebaseConfig.storageBucket
-};
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +23,7 @@ export const firebaseConfig = {
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(masterFirebaseConfig.firebase),
     AngularFireDatabaseModule
   ],
   providers: [],

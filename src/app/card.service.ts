@@ -1,15 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Card } from './models/card.model';
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { Observable } from 'rxjs';
 
 @Injectable()
 export class CardService {
-  mtg: AngularFireList<any[]>
+  mtg: Observable<any>;
   constructor(private database: AngularFireDatabase) {
-  this.mtg = database.list('mtg-test-29e1e') }
+  this.mtg = database.list('GRN').valueChanges();
+
+ }
 
   getCards() {
-    return this.mtg;
+  this.mtg.subscribe(data => {
+    console.log(data);
+    return data;
+  });
+
   }
 }
