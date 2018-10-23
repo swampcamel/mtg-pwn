@@ -17,7 +17,7 @@ export class CardListComponent implements OnInit {
 
   ngOnInit() {
     this.cardService.getCards().valueChanges().subscribe(data => {
-      this.childCardList = data[2];
+      this.childCardList = data;
       console.log(this.childCardList);
     })
   }

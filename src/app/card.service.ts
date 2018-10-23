@@ -7,12 +7,19 @@ import { Observable } from 'rxjs';
 export class CardService {
   mtg: AngularFireList<any>;
   constructor(private database: AngularFireDatabase) {
-  this.mtg = database.list('GRN');
+  this.mtg = database.list('GRN/cards');
 
  }
 
   getCards() {
-    return this.database.list('GRN');
+    return this.mtg;
+    console.log(this.mtg)
+  }
+
+  addCard(newCard: Card) {
+    console.log(newCard);
+    console.log(this.mtg);
+    this.mtg.push(newCard);
   }
 
   }
