@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CardListComponent } from './card-list/card-list.component';
 import { AddCardComponent } from './add-card/add-card.component';
 import { DeckListComponent } from './deck-list/deck-list.component';
+import { CardDetailComponent } from './card-detail/card-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -16,6 +17,10 @@ const appRoutes: Routes = [
   {
     path: 'deck-list',
     component: DeckListComponent
+  },
+  {
+    path: 'cards/:id',
+    component: CardDetailComponent
   }
 ];
 

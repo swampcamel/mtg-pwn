@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Deck } from '../models/deck.model';
 import { Card } from '../models/card.model';
 import { CardService } from '../card.service';
+import { Router } from '@angular/router'
 import { Observable } from 'rxjs';
 import {AngularFireDatabase, AngularFireList} from '@angular/fire/database';
 
@@ -13,7 +14,7 @@ import {AngularFireDatabase, AngularFireList} from '@angular/fire/database';
 })
 export class CardListComponent implements OnInit {
   childCardList;
-  constructor(  private cardService: CardService ) { }
+  constructor(private router: Router,  private cardService: CardService ) { }
 
   ngOnInit() {
     this.cardService.getCards().valueChanges().subscribe(data => {
@@ -22,7 +23,7 @@ export class CardListComponent implements OnInit {
     })
   }
 
-  addCardToDeck (card) {
-
+  goToDetailPage(card) {
+    this.router.navigate(['cards', card.name]);
   }
 }

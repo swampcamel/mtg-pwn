@@ -22,4 +22,7 @@ export class CardService {
     this.mtg.push(newCard);
   }
 
+  getCardById(cardName) {
+    return this.mtg[cardIndex];
+  }
   }
