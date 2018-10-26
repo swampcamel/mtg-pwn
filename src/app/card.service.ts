@@ -13,7 +13,6 @@ export class CardService {
 
   getCards() {
     return this.mtg;
-    console.log(this.mtg)
   }
 
   addCard(newCard: Card) {
@@ -23,6 +22,8 @@ export class CardService {
   }
 
   getCardById(cardName) {
-    return this.mtg;
+    // this.mtg.find(function(card) {
+    //   return card
+    // });
   }
   }
