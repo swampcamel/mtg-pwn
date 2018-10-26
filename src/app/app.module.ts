@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireModule } from '@angular/fire';
@@ -27,6 +29,8 @@ import { CardDetailComponent } from './card-detail/card-detail.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpModule,
     AngularFireModule.initializeApp(masterFirebaseConfig),
     AngularFireDatabaseModule,
     routing

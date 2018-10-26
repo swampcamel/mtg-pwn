@@ -23,6 +23,6 @@ export class CardService {
   }
 
   getCardById(cardName) {
-    return this.mtg[cardIndex];
+    return this.mtg;
   }
   }

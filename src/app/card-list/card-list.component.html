@@ -1,6 +1,6 @@
 <h2 class="section-title">Guilds of Ravnica Card List</h2>
 <ul class="card-list">
   <li class="card-detail" *ngFor="let card of childCardList" (click)="goToDetailPage(card)">
-    <span>{{card.name}}</span><span>{{card.$key}}</span> <span><button type="button" class="addCard"> + </button></span>
+    <span>{{card.name}}</span><span><button type="button" class="addCard"> + </button></span>
   </li>
 </ul>
