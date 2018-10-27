@@ -25,7 +25,7 @@ export class CardService {
     this.mtg.push(newCard);
   }
 
-  getCardById(cardIndex: number) {
+  getCardById(cardIndex: string) {
 
   }
 }
