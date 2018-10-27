@@ -24,10 +24,10 @@ export class CardDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.cardId = urlParameters['name'];
     });
-    // this.cardService.getCardById(this.cardId).valueChanges().subscribe( data => {
-    //   this.cardToDisplay = data;
-    //   console.log(this.cardToDisplay)
-    // });
+    this.cardService.getCardById(this.cardId).valueChanges().subscribe( data => {
+      this.cardToDisplay = data;
+      console.log(this.cardToDisplay)
+    });
 
 
   }

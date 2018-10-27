@@ -19,6 +19,9 @@ export class CardListComponent implements OnInit {
   ngOnInit() {
     this.cardService.getCards().valueChanges().subscribe(data => {
       this.childCardList = data;
+      this.childCardList.forEach(function(card, i) {
+        card.index = i;
+      })
       console.log(this.childCardList);
     })
   }

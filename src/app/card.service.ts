@@ -2,17 +2,21 @@ import { Injectable } from '@angular/core';
 import { Card } from './models/card.model';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { Observable } from 'rxjs';
+import { map } from "rxjs/operators";
 
 @Injectable()
 export class CardService {
+  keys;
   mtg: AngularFireList<any>;
   constructor(private database: AngularFireDatabase) {
   this.mtg = database.list('GRN/cards');
+
 
  }
 
   getCards() {
     return this.mtg;
+
   }
 
   addCard(newCard: Card) {
@@ -21,9 +25,7 @@ export class CardService {
     this.mtg.push(newCard);
   }
 
-  getCardById(cardName: string) {
-    // this.mtg.find(function(card) {
-    //   return card
-    // });
+  getCardById(cardIndex: number) {
+
   }
-  }
+}
