@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Card } from '../models/card.model';
@@ -13,7 +13,7 @@ import { CardService } from '../card.service';
 
 export class CardDetailComponent implements OnInit {
   cardId: string;
-  cardToDisplay;
+  @Input() cardToDisplay;
 
   constructor(
     private route: ActivatedRoute,
@@ -23,11 +23,9 @@ export class CardDetailComponent implements OnInit {
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
       this.cardId = urlParameters['key'];
+      this.cardToDisplay = this.cardService.getCardById(this.cardId);
     });
-    // this.cardService.getCardById(this.cardId).snapshotChanges().subscribe( data => {
-    //   this.cardToDisplay = data;
-    //   console.log(this.cardToDisplay)
-    // });
+    console.log(this.cardToDisplay)
 
 
   }

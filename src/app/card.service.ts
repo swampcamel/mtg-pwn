@@ -27,7 +27,7 @@ export class CardService {
     this.mtg.push(newCard);
   }
 
-  getCardById(cardIndex: string) {
-
+  getCardById(key) {
+    return this.database.object('/GRN/cards/'+key).valueChanges();
   }
 }
