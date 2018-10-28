@@ -1,26 +1,36 @@
 # Mtg Pwn
 
+## Description
+
+This is an angular sandbox for practicing building an admin area for cards.  I utilized a JSON object with information on the GRN card set for the card game 'Magic the Gathering,' which I found at https://mtgjson.com.  This provided me with a large JSON object to work with in an admin area.
+
+The main component view is a list of all the cards in the GRN cards list.  
+Clicking on the name of a card will bring you to a card detail view where you can edit details about the card.  Clicking commit will save it to the database.  
+
+When in the card list view, clicking on the '-' button will display a prompt that will allow you to delete a card from the database.  
+
+Another view accessed through the Add Card button will allow you to fill out a form to add a new card to the database.  
+
+Finally, an unbuilt area for displaying deck lists is behind deck list, but is there for dummy purposes and has no functionality.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.5.
+This project was built with [Angular](https://angular.io/) version 6.1.0
+This project utilizes [Firebase](https://firebase.google.com/) version 5.5.5
 
-## Development server
+## Cloning and Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+After cloning, navigate to folder and run `npm install`.  If issues with build, check `package.json` against this repo and install any missing packages.  `rxjs-compat` is an important package for this environment.  Install with `npm i rxjs-compat` if not listed in `package.json`.
 
-## Code scaffolding
+## Development Server
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng serve --open` for a dev server and an open browser window of the app at `localhost:4200`.
 
-## Build
+## Production Server
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+A live production server is currently up at https://mtg-test-29e1e.firebaseapp.com/
 
-## Running unit tests
+To build a production server, run `ng build --prod`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
 
