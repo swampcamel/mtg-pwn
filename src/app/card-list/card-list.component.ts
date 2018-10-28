@@ -22,7 +22,6 @@ export class CardListComponent implements OnInit {
       this.childCardList.forEach(function(card, i) {
         card.index = i;
       })
-      console.log(this.childCardList);
     })
   }
 

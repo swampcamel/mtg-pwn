@@ -1,0 +1,16 @@
+.edit-wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-field {
+  display: flex;
+  justify-content: space-between;
+}
+
+.infoView {
+  width: 500px;
+}

@@ -1,1 +1,76 @@
-<p>{{cardToDisplay?.name}}</p>
+<div class="edit-wrapper">
+
+  <div class="editView">
+    <h2>Edit Card</h2>
+    <div class="form-field">
+      <label>New Artist: </label>
+      <input  [(ngModel)]="cardToDisplay.artist" type="text">
+    </div>
+    <div class="form-field">
+      <label>New Card Name: </label>
+      <input [(ngModel)]="cardToDisplay.name" type="text">
+    </div>
+    <div class="form-field">
+      <label>Id: </label>
+      <input [(ngModel)]="cardToDisplay.id" type="text">
+    </div>
+    <div class="form-field">
+      <label>Image URL: </label>
+      <input [(ngModel)]="cardToDisplay.imageUrl" type="text">
+    </div>
+    <div class="form-field">
+      <label>Rarity: </label>
+      <input [(ngModel)]="cardToDisplay.rarity" type="text">
+    </div>
+    <div class="form-field">
+      <label>Colors: </label>
+      <input [(ngModel)]="cardToDisplay.colors" type="text">
+    </div>
+    <div class="form-field">
+      <label>Converted Mana Cost: </label>
+      <input [(ngModel)]="cardToDisplay.cmc" type="number">
+    </div>
+    <div class="form-field">
+      <label>Mana Cost by Type: </label>
+      <input [(ngModel)]="cardToDisplay.manaCost" type="text">
+    </div>
+    <div class="form-field">
+      <label>Power: </label>
+      <input [(ngModel)]="cardToDisplay.power" type="number">
+    </div>
+    <div class="form-field">
+      <label>Toughness: </label>
+      <input [(ngModel)]="cardToDisplay.toughness" type="number">
+    </div>
+    <div class="form-field">
+      <label>Card Types: </label>
+      <input [(ngModel)]="cardToDisplay.types" type="text">
+    </div>
+    <div class="form-field">
+      <label>Card Text: </label>
+      <input [(ngModel)]="cardToDisplay.text" type="text">
+    </div>
+    <div class="form-field">
+      <label>Flavor Text: </label>
+      <input [(ngModel)]="cardToDisplay.flavor" type="text">
+    </div>
+    <button (click)="sendUpdate()">Commit</button>
+
+  </div>
+  <div class="infoView">
+    <p>Name: {{cardToDisplay?.name}}</p>
+    <p>Artist: {{cardToDisplay?.artist}}</p>
+    <p>Colors: {{cardToDisplay?.colors}}</p>
+    <p>Flavor: {{cardToDisplay?.flavor}}</p>
+    <p>Id: {{cardToDisplay?.id}}</p>
+    <p>Image Url: {{cardToDisplay?.imageUrl}}</p>
+    <p>Mana Cost: {{cardToDisplay?.manaCost}}</p>
+    <p>Converted Mana Cost: {{cardToDisplay?.cmc}}</p>
+    <p>Power: {{cardToDisplay?.power}}</p>
+    <p>Toughness: {{cardToDisplay?.toughness}}</p>
+    <p>Rarity: {{cardToDisplay?.rarity}}</p>
+    <p>Card Text: {{cardToDisplay?.text}}</p>
+    <p>Types: {{cardToDisplay?.types}}</p>
+  </div>
+
+</div>

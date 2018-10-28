@@ -27,7 +27,8 @@ export class CardDetailComponent implements OnInit {
         this.cardToDisplay = data;
       });
     });
-
-
+  }
+  sendUpdate() {
+    this.cardService.updateCard(this.cardToDisplay, this.cardId);
   }
 }
