@@ -13,7 +13,7 @@ import { CardService } from '../card.service';
 
 export class CardDetailComponent implements OnInit {
   cardId: string;
-  @Input() cardToDisplay;
+  cardToDisplay;
 
   constructor(
     private route: ActivatedRoute,
@@ -23,9 +23,10 @@ export class CardDetailComponent implements OnInit {
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
       this.cardId = urlParameters['key'];
-      this.cardToDisplay = this.cardService.getCardById(this.cardId);
+      this.cardService.getCardById(this.cardId).subscribe(data => {
+        this.cardToDisplay = data;
+      });
     });
-    console.log(this.cardToDisplay)
 
 
   }

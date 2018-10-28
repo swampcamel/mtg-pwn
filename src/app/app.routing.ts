@@ -19,7 +19,7 @@ const appRoutes: Routes = [
     component: DeckListComponent
   },
   {
-    path: 'cards/:id',
+    path: 'cards/:key',
     component: CardDetailComponent
   }
 ];

@@ -7,6 +7,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class CardService {
   keys;
+  cardKey;
   mtg: AngularFireList<any>;
   constructor(private database: AngularFireDatabase) {
   this.mtg = database.list('GRN/cards');
@@ -28,6 +29,6 @@ export class CardService {
   }
 
   getCardById(key) {
-    return this.database.object('/GRN/cards/'+key).valueChanges();
+    return this.database.object('GRN/cards/'+ key).valueChanges()
   }
 }
