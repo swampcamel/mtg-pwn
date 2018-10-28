@@ -19,7 +19,24 @@ This project utilizes [Firebase](https://firebase.google.com/) version 5.5.5
 
 ## Cloning and Installation
 
-After cloning, navigate to folder and run `npm install`.  If issues with build, check `package.json` against this repo and install any missing packages.  `rxjs-compat` is an important package for this environment.  Install with `npm i rxjs-compat` if not listed in `package.json`.
+After cloning, navigate to folder and run `npm install`.
+
+Navigate to `./src/app` and create a new file called `api-keys.ts`
+
+Use the following code, replacing the API key with your database's settings and API key:
+
+```javascript
+export const masterFirebaseConfig = {
+    apiKey: "****************",
+    authDomain: "*****.firebaseapp.com",
+    databaseURL: "https://*****.firebaseio.com",
+    projectId: "*****",
+    storageBucket: "*****.appspot.com",
+    messagingSenderId: "*****"
+};
+```
+
+If issues with build or serve, check `package.json` against this repo and install any missing packages with correct versions.  
 
 ## Development Server
 
