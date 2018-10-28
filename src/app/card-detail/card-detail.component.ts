@@ -22,7 +22,7 @@ export class CardDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.cardId = urlParameters['name'];
+      this.cardId = urlParameters['key'];
     });
     // this.cardService.getCardById(this.cardId).snapshotChanges().subscribe( data => {
     //   this.cardToDisplay = data;

@@ -27,6 +27,6 @@ export class CardListComponent implements OnInit {
   }
 
   goToDetailPage(card) {
-    this.router.navigate(['cards', card.name]);
+    this.router.navigate(['cards', card.key]);
   }
 }

@@ -15,6 +15,7 @@ import { AddCardComponent } from './add-card/add-card.component';
 
 import { routing } from './app.routing';
 import { CardDetailComponent } from './card-detail/card-detail.component';
+import { EditCardComponent } from './edit-card/edit-card.component';
 
 
 
@@ -25,7 +26,8 @@ import { CardDetailComponent } from './card-detail/card-detail.component';
     DeckListComponent,
     DeckDetailComponent,
     AddCardComponent,
-    CardDetailComponent
+    CardDetailComponent,
+    EditCardComponent
   ],
   imports: [
     BrowserModule,
