@@ -1,9 +1,9 @@
 {
   "database": {
-    "rules": "AllSets.json"
+    "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "dist",
+    "public": "dist/mtg-test",
     "ignore": [
       "firebase.json",
       "**/.*",
