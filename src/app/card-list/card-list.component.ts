@@ -28,4 +28,9 @@ export class CardListComponent implements OnInit {
   goToDetailPage(card) {
     this.router.navigate(['cards', card.key]);
   }
+  deleteCard(key) {
+    if(confirm("Are you sure you want to delete this item from the database?")){
+      this.cardService.deleteEntry(key);
+    }
+  }
 }

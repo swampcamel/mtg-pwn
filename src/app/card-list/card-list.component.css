@@ -7,7 +7,7 @@
   padding-bottom: 6px;
 }
 
-.addCard {
+.removeCard {
   margin-left: 20px;
 }
 
@@ -28,4 +28,11 @@
   width: 200px;
   display: flex;
   justify-content: space-between;
+}
+
+.detail-link {
+  color: #CCCDCF;
+  background-color: #762148;
+  padding: 4px;
+  border-radius: 4px;
 }

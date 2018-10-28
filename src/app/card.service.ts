@@ -34,8 +34,8 @@ export class CardService {
   }
 
   updateCard(localCard, cardKey){
-    var entrytoSend = this.database.object('GRN/cards/'+ cardKey)
-      entrytoSend.update({name: localCard.name,
+    var entryToSend = this.database.object('GRN/cards/'+ cardKey)
+      entryToSend.update({name: localCard.name,
         artist: localCard.artist,
         colors: localCard.colors,
         flavor: localCard.flavor,
@@ -49,5 +49,10 @@ export class CardService {
         text: localCard.text,
         types: localCard.types,
     });
+  }
+
+  deleteEntry(key) {
+    var entryToDelete = this.database.object('GRN/cards/'+ key);
+    entryToDelete.remove();
   }
 }
